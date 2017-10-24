@@ -49,3 +49,36 @@ reverseWords(' this is a string of words');
 
 reverseWords(' Coding Javascript');
 //=> ' gnidoC tpircsavaJ'
+
+// my code 
+function reverseArrayInPlace(arr){
+  // reverse arr
+  // return reversed arr 
+  var i = 0;
+  var n = arr.length;
+  var middle = Math.floor(n / 2);
+  var temp = null;
+  
+  for( i ; i < middle; i += 1) {
+    temp = arr[i];
+    arr[i] = arr[n - 1 -i ]; 
+    arr[n -1- i] = temp;
+  }
+  return arr;
+}
+
+reverseArrayInPlace([1, 2, 3, 4, 5,6]);
+
+/*
+// intructors code -- 
+function reverseArrayInplace(arr){
+  for(var i = 0; i < arr.length / 2 ; i++){
+    var tempVar = arr[i];
+    arr[i] = arr[arr.length - 1 - i];
+    arr[arr.length -1 - i] = tempVAr;
+  }
+  return arr; 
+}
+
+
+*/
